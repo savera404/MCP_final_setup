@@ -1,0 +1,14 @@
+{
+  "builds": [
+    {
+      "src": "api/mongodb_server.py",
+      "use": "@vercel/python"
+    }
+  ],
+  "routes": [
+    {
+      "src": "/(.*)",
+      "dest": "api/mongodb_server.py"
+    }
+  ]
+}
