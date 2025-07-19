@@ -207,8 +207,10 @@
 
 from fastapi import FastAPI, Request, HTTPException
 from typing import Dict, Any, Optional, List
-from mongodb_client import MongoDBClient  # Your class from earlier
-import asyncio
+import sys
+import os
+sys.path.append(os.path.dirname(os.path.dirname(__file__)))
+from mongodb_client import MongoDBClient
 import os
 from dotenv import load_dotenv
 import json
